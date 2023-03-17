@@ -9,6 +9,7 @@ public class Registration {
    
 
     public Registration(){
+        
 
         JFrame f= new JFrame("Registration"); // Tittle
 
@@ -62,18 +63,6 @@ public class Registration {
         f.add(tfpw);
 
         
-
-
-
-
-
-
-        
-
-
-
-        
-
 
         JButton Login = new JButton("Save");
         Login.setBounds(150,220,150,25); // For button

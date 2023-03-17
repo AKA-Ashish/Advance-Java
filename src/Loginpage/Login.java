@@ -1,12 +1,17 @@
 package Loginpage;
 import javax.swing.*;
 
-public class Login {
+
+import java.awt.event.*;
+
+public class Login implements ActionListener{
+
+    JTextField tfpw;
+    JTextField tfuser;  //// textfield declaration which is global variable.
+    JButton Login;       
 
     
-    // public static void main(String[] args) {
-    //     new Login();
-    // }
+    
 
     public Login()
     {
@@ -16,7 +21,7 @@ public class Login {
         luser.setBounds(20,20,150,25); // Username
         f.add(luser);
 
-        JTextField tfuser = new JTextField();
+        tfuser = new JTextField();
         tfuser.setBounds(180,20,150,25); // Textfield of username
         f.add(tfuser);
 
@@ -24,12 +29,14 @@ public class Login {
         lpw.setBounds(20,55,150,25); // Password
         f.add(lpw);
 
-        JTextField tfpw = new JTextField();
+        tfpw = new JTextField();
         tfpw.setBounds(180,55,150,25); // Textfield of Password
         f.add(tfpw);
 
 
-        JButton Login = new JButton("Login");
+        Login = new JButton("Login");
+       
+        Login.addActionListener(this);
         Login.setBounds(180,90,150,25); // For button
         f.add(Login);
 
@@ -38,11 +45,41 @@ public class Login {
         f.setLayout(null);    ///// For frame
         f.setVisible(true);
 
+
+
+
+
+
         
     }
     public static void main(String[] args) {
         new Login();
         }
+ 
+
+        @Override
+        public void actionPerformed(ActionEvent e) {  //factoryMethod(actionPerdormed)
+            
+            String luser = tfuser.getText();
+            String lpw = tfpw.getText();
+        
+            if(luser.equals("admin")&& lpw.equals("admin")){
+                System.out.println("hellow world");
+    
+            }
+            else{
+                System.out.println("Error");
+            }
+        }
+
+
+
     }
+
+
+
+
+    
+   
   
 

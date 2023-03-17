@@ -75,7 +75,7 @@ public class Registration {
 
 
     }
-    public static void main(String[] args) {   ///// Method Call??????????
+    public static void main(String[] args) {  
         new Registration();
     }
 

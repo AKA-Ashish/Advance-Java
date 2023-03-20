@@ -1,4 +1,5 @@
 package Loginpage;
+
 import javax.swing.*;
 
 
@@ -9,13 +10,14 @@ public class Login implements ActionListener{
     JTextField tfpw;
     JTextField tfuser;  //// textfield declaration which is global variable.
     JButton Login;       
+    JFrame f;
 
     
     
 
     public Login()
     {
-        JFrame f= new JFrame("Login");
+        f= new JFrame("Login");
 
         JLabel luser = new JLabel("Username");
         luser.setBounds(20,20,150,25); // Username
@@ -40,16 +42,15 @@ public class Login implements ActionListener{
         Login.setBounds(180,90,150,25); // For button
         f.add(Login);
 
+        
+
 
         f.setSize(500,500);
         f.setLayout(null);    ///// For frame
         f.setVisible(true);
+        
 
-
-
-
-
-
+       
         
     }
     public static void main(String[] args) {
@@ -64,7 +65,18 @@ public class Login implements ActionListener{
             String lpw = tfpw.getText();
         
             if(luser.equals("admin")&& lpw.equals("admin")){
-                System.out.println("hellow world");
+           
+                JDialog d = new JDialog(f,"Login_succecssfull",true); //added New popup Frame.
+                JLabel l = new JLabel("Login_Successfull");  //  added Label Text inside frame.
+                l.setBounds(300,100,200,100);
+                d.add(l);
+
+                d.setLocationRelativeTo(d);
+                d.setSize(600,400);
+                d.setLayout(null);
+                d.setVisible(true);
+                
+                System.out.println("Loged In");
     
             }
             else{

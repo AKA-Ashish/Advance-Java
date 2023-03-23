@@ -68,7 +68,6 @@ public class Catchme implements MouseListener {
         jb.setBounds(x,y,150,30);
         
         
-        
        
     }
     @Override

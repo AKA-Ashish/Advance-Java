@@ -17,12 +17,14 @@ public class ActionCommandClass implements ActionListener {
 
         jb1 = new JButton("First");
         jb1.setBounds(140,150,100,30);
+
         jb1.setActionCommand("1");
         jb1.addActionListener(this);
 
 
         jb2 = new JButton("Second");
         jb2.setBounds(140,200,100,30);
+        
         jb2.setActionCommand("2");
         jb2.addActionListener(this);
 

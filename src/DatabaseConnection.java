@@ -1,27 +1,27 @@
-import java.sql.*;  
+// import java.sql.*;
 
-class MysqlCon{  
+// public class MainMethod {
 
-public static void main(String args[]){  
+//   public static void main(String[] args) throws Exception {
+//     String url = "jdbc:mysql://localhost:3306/bcajava_2023";
+//     String username = "root";
+//     String password = "sqlroot";
+//     try {
+//       // Loading/Register SQL Driver
+//       Class.forName("com.mysql.cj.jdbc.Driver");
 
-try{  
+//       //   Establish connection with database
+//       Connection conn = DriverManager.getConnection(url, username, password);
+//       System.out.println("Conenction Successfully executed");
+//       //   Passing conn value
+//       new LoginFormGUI(conn);
+//     } catch (SQLException e) {
+//       System.out.println("Error Connecting to Database : " + e.getMessage());
+//     }
+//   }
+// }
 
-Class.forName("com.mysql.jdbc.Driver");  
-
-Connection con=DriverManager.getConnection(  
-
-"jdbc:mysql://localhost:3306/sonoo","root","root");  
-
-//here sonoo is database name, root is username and password  
-Statement stmt=con.createStatement();  
-
-ResultSet rs=stmt.executeQuery("select * from emp");  
-
-while(rs.next())  
-
-System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
-con.close();  
-
-}catch(Exception e){ System.out.println(e);}  
-}  
-}
+// // DATABASE Name: bcajava_2023
+// // Username : root
+// // Password : sqlroot
+// // Table : CREATE TABLE User ( username VARCHAR(50) PRIMARY KEY NOT NULL, password VARCHAR(50) );
